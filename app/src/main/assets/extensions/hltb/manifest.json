@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+
+  "name": "Steam Enhanced HLTB",
+  "version": "1.0.1",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{6f0e9b42-9e16-4e67-a12b-0d6a5a4c4a10}",
+      "strict_min_version": "140.0"
+    }
+  },
+
+  "permissions": [
+    "nativeMessaging",
+    "nativeMessagingFromContent",
+    "geckoViewAddons"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://store.steampowered.com/app/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

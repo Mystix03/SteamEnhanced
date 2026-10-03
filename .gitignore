@@ -1,0 +1,69 @@
+# Built application files
+*.apk
+*.apks
+*.aab
+
+# Files for the Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+build/
+app/build/
+app/release/
+
+# Gradle files
+.gradle/
+.cxx/
+.externalNativeBuild/
+
+# Local configuration file (sdk.dir, etc.)
+local.properties
+
+# IDE specific files
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/dictionaries/
+.idea/shelf/
+.idea/caches/
+.idea/libraries/
+.idea/assetWizardSettings.xml
+.idea/compiler.xml
+.idea/deploymentTargetSelector.xml
+.idea/gradle.xml
+.idea/kotlinc.xml
+.idea/misc.xml
+.idea/navEditor.xml
+.idea/runConfigurations/
+.idea/vcs.xml
+
+# Intellij IDEA project files
+*.iml
+*.ipr
+*.iws
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+.Thumbs.db
+Thumbs.db
+desktop.ini
+
+# Profiler & captures
+*.hprof
+captures/
+
+# Logs and temporary files
+*.log
+*.tmp
+.net.ankiweb.AnkiDroid

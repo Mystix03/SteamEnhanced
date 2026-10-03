@@ -1,0 +1,66 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.custom.steamenhanced'
+
+    compileSdk {
+        version = release(37) {
+            minorApiLevel = 2
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.custom.steamenhanced"
+        minSdk 26
+        targetSdk 37
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    /*
+     * Build only for ARM64 devices.
+     *
+     * This avoids including unnecessary native
+     * GeckoView libraries for x86/x86_64/ARM32.
+     */
+    splits {
+        abi {
+            enable true
+            reset()
+            include "arm64-v8a"
+            universalApk false
+        }
+    }
+
+    buildTypes {
+        release {
+            optimization {
+                enable true
+            }
+            shrinkResources true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation libs.activity.ktx
+    implementation libs.appcompat
+    implementation libs.constraintlayout
+    implementation libs.material
+
+    testImplementation libs.junit
+
+    androidTestImplementation libs.espresso.core
+    androidTestImplementation libs.ext.junit
+
+    implementation "org.mozilla.geckoview:geckoview:156.0.20260921121718"
+}
